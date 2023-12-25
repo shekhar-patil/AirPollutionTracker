@@ -1,0 +1,4 @@
+import_pollution_data_job:
+  cron: "*/30 * * * * *"
+  class: "ImportPollutionDataJob"
+  queue: "default"
