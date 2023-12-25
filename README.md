@@ -1,24 +1,13 @@
-# README
+Analyzing Air Pollution Data
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+### Objective:
+The goal of this assignment is to assess your ability to research external APIs for integrations, create an importer, demonstrate code quality, and write database queries. The task focuses on integrating the OpenWeatherMap Air Pollution API into a Rails application to fetch, import, and store air pollution data for different cities across India.
 
-Things you may want to cover:
 
-* Ruby version
+# How to start with Project
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+1. Clone this project and perform `bundle install`
+2. Create API key from https://openweathermap.org/guide
+3. create file .env in the root folder and add following enviroment variable.
+`AIR_POLLUTION_API_KEY={api_key}`
+4. Execute seed file using `bundle exec rails db:seed`

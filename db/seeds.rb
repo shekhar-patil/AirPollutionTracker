@@ -1,7 +1,37 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the bin/rails db:seed command (or created alongside the database with db:setup).
-#
-# Examples:
-#
-#   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
-#   Character.create(name: "Luke", movie: movies.first)
+City.destroy_all
+
+default_cities = %w[
+  Mumbai
+  Delhi
+  Bengaluru
+  Chennai
+  Kolkata
+  Hyderabad
+  Pune
+  Ahmedabad
+  Jaipur
+  Surat
+  Lucknow
+  Kanpur
+  Nagpur
+  Patna
+  Indore
+  Thane
+  Bhopal
+  Visakhapatnam
+  Vadodara
+  Ghaziabad
+  Panaji
+]
+
+default_cities.each do |city|
+  response = OpenWeatherApi.new().fetch_city(city)
+
+  City.create!(
+    name: response[0]['name'],
+    lat: response[0]['lat'],
+    lon: response[0]['lon'],
+    country: response[0]['country'],
+    state: response[0]['state']
+  )
+end
