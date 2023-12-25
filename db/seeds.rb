@@ -10,7 +10,6 @@ default_cities = %w[
   Pune
   Ahmedabad
   Jaipur
-  Surat
   Lucknow
   Kanpur
   Nagpur

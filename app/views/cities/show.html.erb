@@ -4,12 +4,17 @@
     <div class="sm:flex sm:items-center">
       <div class="sm:flex-auto">
         <h1 class="text-base font-semibold text-gray-900">
-          <%= @city.name %>
+          <%= @city.name %>, <%= @city.state %>, <%= @city.country %>
         </h1>
         <p class="mt-2 text-sm text-gray-700"></p>
-      </div>
-      <div class="mt-4 sm:ml-16 sm:mt-0 sm:flex-none">
-        <p class="mt-2 text-sm text-gray-700"><%= @city.state %>, <%= @city.country %></p>
+        </br>
+        <h1 class="text-base text-2xl font-semibold text-gray-900">Month wise average AQI for the <%= @city.name %></h1>
+        <% @monthly_avg_aqi_per_location.each do |data| %>
+          <p> Average AQI for <%= Date::MONTHNAMES[data.month] %>: <%= data.avg_aqi.round(2) %></p>
+        <% end %>
+        </br>
+        <p><h1 class="text-base text-2xl font-semibold text-gray-900">Average AQI for the <%= @city.name %>:</h1> <%= @average_aqi_per_location.first.avg_aqi.round(2) %></p>
+
       </div>
     </div>
   </div>

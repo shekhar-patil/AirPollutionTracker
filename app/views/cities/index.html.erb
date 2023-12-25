@@ -1,4 +1,10 @@
 <div class="w-full mt-10">
+  <h1 class="text-base text-2xl font-semibold text-gray-900">Average AQI per State:</h1>
+  </br>
+  <% @average_aqi_per_state.each do |data| %>
+    <p><%= data.state_name %> | Average AQI: <%= data.avg_aqi.round(2) %></p>
+  <% end %>
+  <br>
   <h1 class="text-base text-2xl font-semibold text-gray-900">All Cities</h1>
   <div id="cities" class="flex flex-wrap justify-center">
     <%= render @cities %>

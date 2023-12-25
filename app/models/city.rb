@@ -1,5 +1,5 @@
 class City < ApplicationRecord
-  has_many :pollution_data
+  has_many :pollution_data, dependent: :destroy
 
   def self.find_or_initialize(name)
     city = City.find_by(name: name.capitalize)
