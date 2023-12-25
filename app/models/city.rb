@@ -1,4 +1,6 @@
 class City < ApplicationRecord
+  has_many :pollution_data
+
   def self.find_or_initialize(name)
     city = City.find_by(name: name.capitalize)
 

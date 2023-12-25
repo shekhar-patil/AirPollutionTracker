@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_12_25_095718) do
+ActiveRecord::Schema[7.0].define(version: 2023_12_25_142735) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -24,4 +24,22 @@ ActiveRecord::Schema[7.0].define(version: 2023_12_25_095718) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "pollution_data", force: :cascade do |t|
+    t.float "co"
+    t.float "no"
+    t.float "no2"
+    t.float "o3"
+    t.float "so2"
+    t.float "pm2_5"
+    t.float "pm10"
+    t.float "nh3"
+    t.bigint "dt"
+    t.integer "index"
+    t.bigint "city_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["city_id"], name: "index_pollution_data_on_city_id"
+  end
+
+  add_foreign_key "pollution_data", "cities"
 end

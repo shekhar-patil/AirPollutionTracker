@@ -1,0 +1,9 @@
+<div class="w-2/6 rounded-lg bg-emerald-300 m-5" id="<%= dom_id city %>">
+  <div class="px-4 py-5 sm:px-6">
+    <h3 class="text-base font-semibold leading-6 text-gray-900"><%= city.name %>, <%= city.state %>, <%= city.country %></h3>
+
+  </div>
+  <% if action_name != "show" %>
+    <%= link_to "Show this pollution data", city, class: "rounded-lg py-3 px-5 bg-gray-100 inline-block font-medium mb-10" %>
+  <% end %>
+</div>
