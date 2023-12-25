@@ -14,7 +14,10 @@ development:
 
 test:
   <<: *default
+  username: root
+  password: password
   database: AirPollutionTracker_test
+  host: 127.0.0.1
 
 production:
   <<: *default
