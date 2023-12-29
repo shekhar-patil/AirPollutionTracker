@@ -10,6 +10,6 @@ FactoryBot.define do
     nh3 { 1.5 }
     dt { "" }
     index { 1 }
-    city { nil }
+    association :city, factory: :city
   end
 end
