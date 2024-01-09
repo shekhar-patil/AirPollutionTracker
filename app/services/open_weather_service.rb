@@ -1,15 +1,17 @@
 require 'httparty'
 
-class OpenWeatherApi
+class OpenWeatherService
   include HTTParty
   base_uri 'http://api.openweathermap.org/'
 
-  def initialize(city = nil)
+  def initialize(options = {})
+    city = options[:city]
+
     @options = {
       query: {
         appid: ENV['AIR_POLLUTION_API_KEY'],
-        lat: city&.lat,
-        lon: city&.lon
+        lat: city&.latitude,
+        lon: city&.longitude
       }
     }
   end

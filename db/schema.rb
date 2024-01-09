@@ -16,8 +16,8 @@ ActiveRecord::Schema[7.0].define(version: 2023_12_25_142735) do
 
   create_table "cities", force: :cascade do |t|
     t.string "name"
-    t.float "lat"
-    t.float "lon"
+    t.float "latitude"
+    t.float "longitude"
     t.string "country"
     t.string "state"
     t.datetime "created_at", null: false
@@ -25,16 +25,16 @@ ActiveRecord::Schema[7.0].define(version: 2023_12_25_142735) do
   end
 
   create_table "pollution_data", force: :cascade do |t|
-    t.float "co"
-    t.float "no"
-    t.float "no2"
-    t.float "o3"
-    t.float "so2"
-    t.float "pm2_5"
-    t.float "pm10"
-    t.float "nh3"
-    t.bigint "dt"
-    t.integer "index"
+    t.float "carbon_monoxide"
+    t.float "nitric_oxide"
+    t.float "nitrogen_dioxide"
+    t.float "ozone"
+    t.float "sulfur_dioxide"
+    t.float "particulate_matter_2_5"
+    t.float "particulate_matter_10"
+    t.float "ammonia"
+    t.bigint "timestamp"
+    t.integer "data_index"
     t.bigint "city_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false

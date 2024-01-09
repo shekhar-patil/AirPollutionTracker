@@ -9,7 +9,7 @@ namespace :import do
       end_date = (current_date << month_ago).strftime('%s')
 
       cities.each do |city|
-        api = OpenWeatherApi.new(city)
+        api = OpenWeatherService.new(city)
         historical_data = api.historical_pollution(start_date, end_date)
 
         next unless historical_data && historical_data['list'] && !historical_data['list'].empty?

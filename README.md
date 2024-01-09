@@ -7,10 +7,10 @@ This assignment evaluates your proficiency in integrating external APIs, buildin
 
 1. Begin by cloning this project and executing `bundle install`.
 2. Generate an API key from https://openweathermap.org/guide.
-3. Create a file named `.env` in the root folder and include the following environment variable:  
+3. Create a file named `.env` in the root folder and include the following environment variable:
    `AIR_POLLUTION_API_KEY={api_key}`
 4. Run the seed file using `bundle exec rails db:seed`.
-5. To fetch historical data, execute the rake task:  
+5. To fetch historical data, execute the rake task:
    `rails import:historical_pollution_data`.
 
 #### Components Included in this Assignment
@@ -19,7 +19,7 @@ This assignment evaluates your proficiency in integrating external APIs, buildin
 2. **Sidekiq Job and sidekiq-cron:** Employed for importing pollution data at regular intervals (`ImportPollutionDataJob`).
 3. **VCR gem:** Prevents redundant API calls during testing (test cases).
 4. **RSpec:** Ensures test coverage.
-5. **Service:** Utilizes the OpenWeatherApi for making API requests.
+5. **Service:** Utilizes the OpenWeatherService for making API requests.
 6. **Tailwind:** Integrated for CSS styling.
 
 [View the demo video here](https://www.loom.com/share/48abb3c416c54632ade620428d99e9db?sid=a1bacac2-5e2f-495d-a96b-172c6a3e904e)

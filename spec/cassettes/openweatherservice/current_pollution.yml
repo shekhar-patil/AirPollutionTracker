@@ -21,7 +21,7 @@ http_interactions:
       Server:
       - openresty
       Date:
-      - Mon, 25 Dec 2023 13:56:36 GMT
+      - Tue, 09 Jan 2024 18:52:22 GMT
       Content-Type:
       - application/json; charset=utf-8
       Content-Length:
@@ -39,8 +39,8 @@ http_interactions:
     body:
       encoding: ASCII-8BIT
       string: !binary |-
-        W3sibmFtZSI6IkRlbGhpIiwibG9jYWxfbmFtZXMiOnsiaGUiOiLXk9ec15TXmSIsImVzIjoiRGVsaGkiLCJ0aCI6IuC5gOC4lOC4peC4tSIsInRhIjoi4K6k4K6/4K6y4K+N4K6y4K6/IiwicGEiOiLgqKbgqL/gqbHgqLLgqYAiLCJuZSI6IuCkpuCkv+CksuCljeCksuClgCIsImphIjoi44OH44Oq44O8Iiwib2MiOiJEZWxoaSIsInpoIjoi5b636YeMIiwiY3MiOiJEaWxsw60iLCJwdCI6IkRlbGkiLCJtbCI6IuC0oeC1huC1veC0ueC0vyIsInRlIjoi4LCi4LC/4LCy4LGN4LCy4LGAIiwiZW4iOiJEZWxoaSIsImtvIjoi642466asIiwiZmEiOiLYr9mH2YTbjCIsImt1IjoiRGVsaMOuIiwiYm4iOiLgpqbgpr/gprLgp43gprLgpr8iLCJrbiI6IuCypuCzhuCyueCysuCyvyIsImRlIjoiRGVsaGkiLCJoaSI6IuCkpuCkv+CksuCljeCksuClgCIsImZyIjoiRGVsaGkiLCJtcyI6IkRlbGhpIiwidWsiOiLQlNC10LvRliIsImFyIjoi2K/ZhNmH2YoiLCJlbyI6IkRlbGhpbyIsIm15Ijoi4YCS4YCx4YCc4YCu4YCZ4YC84YCt4YCv4YC3IiwidXIiOiLYr9uB2YTbjCIsInJ1Ijoi0JTQtdC70LgiLCJsdiI6IkRlbGkiLCJlbCI6Is6UzrXOu8+Hzq8ifSwibGF0IjoyOC42NTE3MTc4LCJsb24iOjc3LjIyMTkzODgsImNvdW50cnkiOiJJTiIsInN0YXRlIjoiRGVsaGkifV0=
-  recorded_at: Mon, 25 Dec 2023 13:56:36 GMT
+        W3sibmFtZSI6IkRlbGhpIiwibG9jYWxfbmFtZXMiOnsiY3MiOiJEaWxsw60iLCJ1ciI6Itiv24HZhNuMIiwiaGUiOiLXk9ec15TXmSIsImx2IjoiRGVsaSIsImZyIjoiRGVsaGkiLCJtbCI6IuC0oeC1huC1veC0ueC0vyIsImVsIjoizpTOtc67z4fOryIsIm1zIjoiRGVsaGkiLCJqYSI6IuODh+ODquODvCIsInRoIjoi4LmA4LiU4Lil4Li1Iiwia3UiOiJEZWxow64iLCJwdCI6IkRlbGkiLCJibiI6IuCmpuCmv+CmsuCnjeCmsuCmvyIsIm9jIjoiRGVsaGkiLCJkZSI6IkRlbGhpIiwicGEiOiLgqKbgqL/gqbHgqLLgqYAiLCJrbyI6IuuNuOumrCIsImVzIjoiRGVsaGkiLCJydSI6ItCU0LXQu9C4IiwiemgiOiLlvrfph4wiLCJmYSI6Itiv2YfZhNuMIiwidGUiOiLgsKLgsL/gsLLgsY3gsLLgsYAiLCJ1ayI6ItCU0LXQu9GWIiwiYXIiOiLYr9mE2YfZiiIsInRhIjoi4K6k4K6/4K6y4K+N4K6y4K6/IiwibXkiOiLhgJLhgLHhgJzhgK7hgJnhgLzhgK3hgK/hgLciLCJrbiI6IuCypuCzhuCyueCysuCyvyIsIm5lIjoi4KSm4KS/4KSy4KWN4KSy4KWAIiwiZW4iOiJEZWxoaSIsImhpIjoi4KSm4KS/4KSy4KWN4KSy4KWAIiwiZW8iOiJEZWxoaW8ifSwibGF0IjoyOC42NTE3MTc4LCJsb24iOjc3LjIyMTkzODgsImNvdW50cnkiOiJJTiIsInN0YXRlIjoiRGVsaGkifV0=
+  recorded_at: Tue, 09 Jan 2024 18:52:22 GMT
 - request:
     method: get
     uri: http://api.openweathermap.org/data/2.5/air_pollution?appid=60af7843eb5470d93596d1631068a72b&lat=28.6517178&lon=77.2219388
@@ -62,11 +62,11 @@ http_interactions:
       Server:
       - openresty
       Date:
-      - Mon, 25 Dec 2023 13:56:36 GMT
+      - Tue, 09 Jan 2024 18:52:22 GMT
       Content-Type:
       - application/json; charset=utf-8
       Content-Length:
-      - '196'
+      - '191'
       Connection:
       - keep-alive
       X-Cache-Key:
@@ -79,6 +79,6 @@ http_interactions:
       - GET, POST
     body:
       encoding: UTF-8
-      string: '{"coord":{"lon":77.2219,"lat":28.6517},"list":[{"main":{"aqi":5},"components":{"co":2857.21,"no":2.71,"no2":89.11,"o3":5.28,"so2":25.51,"pm2_5":305.01,"pm10":405.83,"nh3":25.33},"dt":1703512596}]}'
-  recorded_at: Mon, 25 Dec 2023 13:56:37 GMT
+      string: '{"coord":{"lon":77.2219,"lat":28.6517},"list":[{"main":{"aqi":5},"components":{"co":1241.68,"no":0,"no2":20.91,"o3":61.51,"so2":8.7,"pm2_5":232.25,"pm10":253.96,"nh3":3.64},"dt":1704826342}]}'
+  recorded_at: Tue, 09 Jan 2024 18:52:22 GMT
 recorded_with: VCR 6.2.0

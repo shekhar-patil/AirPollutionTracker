@@ -7,6 +7,14 @@ RSpec.describe CitiesController, type: :controller do
 
       expect { get :index }.to raise_error(StandardError)
     end
+
+    it 'assigns @average_aqi_per_state' do
+      # Assuming `calculate_average_aqi_per_state` is a private method
+      allow_any_instance_of(CitiesController).to receive(:calculate_average_aqi_per_state).and_return([])
+
+      get :index
+      expect(assigns(:average_aqi_per_state)).to eq([])
+    end
   end
 
   describe 'GET #show' do

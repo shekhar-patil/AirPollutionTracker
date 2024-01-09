@@ -1,7 +1,7 @@
 class City < ApplicationRecord
   has_many :pollution_data, dependent: :destroy
 
-  def self.find_or_initialize(name)
+  def self.find_or_initialize_by_name(name:)
     city = City.find_by(name: name.capitalize)
 
     return city if city.present?
@@ -11,7 +11,7 @@ class City < ApplicationRecord
   end
 
   def self.fetch_city_data(name)
-    OpenWeatherApi.new.fetch_city(name)
+    OpenWeatherService.new.fetch_city(name)
   end
 
   def self.build_city_from_response(response)
@@ -19,8 +19,8 @@ class City < ApplicationRecord
 
     City.new(
       name: city_data['name'],
-      lat: city_data['lat'],
-      lon: city_data['lon'],
+      latitude: city_data['lat'],
+      longitude: city_data['lon'],
       country: city_data['country'],
       state: city_data['state']
     )

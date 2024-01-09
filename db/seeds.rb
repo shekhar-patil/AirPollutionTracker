@@ -23,14 +23,16 @@ default_cities = %w[
   Panaji
 ]
 
-default_cities.each do |city|
-  response = OpenWeatherApi.new().fetch_city(city)
+default_cities.each do |city_name|
+  response = OpenWeatherService.new().fetch_city(city_name)
+
+  city_data = response.first
 
   City.create!(
-    name: response[0]['name'],
-    lat: response[0]['lat'],
-    lon: response[0]['lon'],
-    country: response[0]['country'],
-    state: response[0]['state']
+    name: city_data['name'],
+    latitude: city_data['lat'],
+    longitude: city_data['lon'],
+    country: city_data['country'],
+    state: city_data['state']
   )
 end

@@ -1,16 +1,16 @@
 <tr id="<%= dom_id pollution_datum %>">
   <td class="relative py-4 pr-3 text-sm font-medium text-gray-900">
-    <%= pollution_datum.index %>
+    <%= pollution_datum.data_index %>
     <div class="absolute bottom-0 right-full h-px w-screen bg-gray-100"></div>
     <div class="absolute bottom-0 left-0 h-px w-screen bg-gray-100"></div>
   </td>
-  <td class="px-3 py-4 text-sm text-gray-500"><%= pollution_datum.co %></td>
-  <td class="hidden px-3 py-4 text-sm text-gray-500 sm:table-cell"><%= pollution_datum.no %></td>
-  <td class="hidden px-3 py-4 text-sm text-gray-500 md:table-cell"><%= pollution_datum.no2 %></td>
-  <td class="px-3 py-4 text-sm text-gray-500"><%= pollution_datum.o3 %></td>
-  <td class="px-3 py-4 text-sm text-gray-500"><%= pollution_datum.so2 %></td>
-  <td class="px-3 py-4 text-sm text-gray-500"><%= pollution_datum.pm2_5 %></td>
-  <td class="px-3 py-4 text-sm text-gray-500"><%= pollution_datum.pm10 %></td>
-  <td class="px-3 py-4 text-sm text-gray-500"><%= pollution_datum.nh3 %></td>
-  <td class="px-3 py-4 text-sm text-gray-500"><%= Time.at(pollution_datum.dt) %></td>
+  <td class="px-3 py-4 text-sm text-gray-500"><%= pollution_datum.carbon_monoxide %></td>
+  <td class="hidden px-3 py-4 text-sm text-gray-500 sm:table-cell"><%= pollution_datum.nitric_oxide %></td>
+  <td class="hidden px-3 py-4 text-sm text-gray-500 md:table-cell"><%= pollution_datum.nitrogen_dioxide %></td>
+  <td class="px-3 py-4 text-sm text-gray-500"><%= pollution_datum.ozone %></td>
+  <td class="px-3 py-4 text-sm text-gray-500"><%= pollution_datum.sulfur_dioxide %></td>
+  <td class="px-3 py-4 text-sm text-gray-500"><%= pollution_datum.particulate_matter_2_5 %></td>
+  <td class="px-3 py-4 text-sm text-gray-500"><%= pollution_datum.particulate_matter_10 %></td>
+  <td class="px-3 py-4 text-sm text-gray-500"><%= pollution_datum.ammonia %></td>
+  <td class="px-3 py-4 text-sm text-gray-500"><%= Time.at(pollution_datum.timestamp) %></td>
 </tr>
